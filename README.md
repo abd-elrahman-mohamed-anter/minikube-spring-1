@@ -99,8 +99,6 @@ minikube dashboard
 
 Navigate to the **Workloads** section to monitor Deployments and Pods.
 
----
-
 ## License
 
 Educational project.
