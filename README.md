@@ -103,5 +103,3 @@ Navigate to the **Workloads** section to monitor Deployments and Pods.
 
 Educational project.
 
-```
-
