@@ -37,48 +37,29 @@ Access your app at: http://127.0.0.1:8081/actuator/health
 
 ## Screenshots
 
-### 1. `screenshots/script.png`
+### 1. Deployment Script (`script.png`)
+![Deployment Script](screenshots/script.png)
+* Running `./deploy.sh` to create **Deployment** and **Service**.
+* Port-forward opens `127.0.0.1:8081` to access the app and Actuator.
 
-Shows the execution of `./deploy.sh`, creation of **Deployment** and **Service**, and starting **port-forward**.
+### 2. Kubernetes Resources (`all.png`)
+![Kubernetes Resources](screenshots/all.png)
+* Shows 3 Pods running, Service and Deployment created successfully.
+* Health endpoint returns: `{"status":"UP","groups":["liveness","readiness"]}`
 
-### 2. `screenshots/all.png`
+### 3. Spring Boot Actuator (`actuator.png`)
+![Spring Boot Actuator](screenshots/actuator.png)
+* Health endpoint in browser confirming the application is running.
 
-Shows the status of Kubernetes resources using:
+### 4. Application UI (`spring.png`)
+![Application UI](screenshots/spring.png)
+* Spring PetClinic frontend accessible at `127.0.0.1:8081`.
 
-```bash
-kubectl get all -o wide
-```
-
-* All Pods are running successfully.
-* NodePort Service is ready.
-* Health check via Actuator shows:
-
-```json
-{"status":"UP","groups":["liveness","readiness"]}
-```
-
-### 3. `screenshots/actuator.png`
-
-Accessing the Spring Boot Actuator health endpoint:
-
-```
-http://127.0.0.1:8081/actuator/health
-```
-
-Indicates that the application status is **UP**.
-
-### 4. `screenshots/spring.png`
-
-Shows the frontend of the **Spring PetClinic** application after port-forwarding.
-
-### 5. `screenshots/dash1.png` and `dash2.png`
-
-Kubernetes Dashboard screenshots:
-
-* `dash1.png` : Overview of **Workloads** and Deployment.
-* `dash2.png` : Detailed view of Pods and ReplicaSets, confirming 3 Pods running.
-
----
+### 5. Kubernetes Dashboard (`dash1.png` & `dash2.png`)
+![Dashboard Overview](screenshots/dash1.png)
+![Dashboard Details](screenshots/dash2.png)
+* Visual overview of **Workloads**, **Pods**, **ReplicaSets**, and **Deployments**.
+* Confirms all resources are running as expected.
 
 ## Notes
 
