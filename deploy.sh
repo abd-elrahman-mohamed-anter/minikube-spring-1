@@ -21,10 +21,5 @@ trap "echo 'Stopping port-forward...'; kill $PF_PID" EXIT
 # طبع رابط الوصول
 echo "Access your app at: http://127.0.0.1:8081/actuator/health"
 
-# السكريبت ممكن يكمل هنا لأي أوامر إضافية
-# مثلا:
-# echo "Doing other tasks..."
-# sleep 60
-
 # لو عايز السكريبت ينتظر طول ما الـ port-forward شغال:
 wait $PF_PID
