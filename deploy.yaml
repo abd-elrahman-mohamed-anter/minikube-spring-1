@@ -21,7 +21,7 @@ spec:
           limits:
             memory: "512Mi"
             cpu: "500m"
-        # هنا تضيف الـ liveness و readiness probes
+       
         livenessProbe:
           httpGet:
             path: /actuator/health
