@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# نشر Deployment و Service
 kubectl apply -f .
 
-# انتظر 30 ثانية عشان البودات تشتغل
 echo "Waiting 30 seconds for pods to be ready..."
 sleep 30
 
